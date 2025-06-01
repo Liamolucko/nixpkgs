@@ -14467,6 +14467,10 @@ self: super: with self; {
 
   python3-saml = callPackage ../development/python-modules/python3-saml { };
 
+  inherit (callPackage ../development/python-modules/pythondata { })
+    pythondata-software-picolibc
+    ;
+
   pythondialog = callPackage ../development/python-modules/pythondialog { };
 
   pythonefl = callPackage ../development/python-modules/python-efl { };
