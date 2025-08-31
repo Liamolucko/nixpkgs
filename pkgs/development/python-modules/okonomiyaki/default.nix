@@ -30,12 +30,6 @@ buildPythonPackage rec {
     hash = "sha256-xAF9Tdr+IM3lU+mcNcAWATJLZOVvbx0llqznqHLVqDc=";
   };
 
-  postPatch = ''
-    # Fixed for >= 2.0.0
-    substituteInPlace setup.cfg \
-      --replace-fail "long_description_content_type = rst" "long_description_content_type = text/x-rst"
-  '';
-
   build-system = [ setuptools ];
 
   optional-dependencies = {
